@@ -4,6 +4,8 @@
 
 namespace Tierras.viewModels
 {
+    using GalaSoft.MvvmLight.Command;
+    using System;
     using System.Windows.Input;
     public class loginViewModel
     {
@@ -28,7 +30,18 @@ namespace Tierras.viewModels
         #endregion
 
         #region Commands
-        public ICommand LoginCommand { get; set; }
+        public ICommand LoginCommand 
+        { 
+            get
+            {
+                return new RelayCommand(Login);
+            }
+        }
+
+        private void Login()
+        {
+            
+        }
         #endregion
     }
 }

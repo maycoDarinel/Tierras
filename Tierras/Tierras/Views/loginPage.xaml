@@ -14,11 +14,11 @@
 
                 <Label 
                 
-                Text="Tierras"
-                Padding=" 10,20,10,5"
-                FontAttributes="Bold" 
-                FontSize="Large" 
-                HorizontalOptions="Center">
+                    Text="Tierras"
+                    Padding=" 10,20,10,5"
+                    FontAttributes="Bold" 
+                    FontSize="Large" 
+                    HorizontalOptions="Center">
 
                 </Label>
                 <Image Source="onu.png">
@@ -68,6 +68,14 @@
                     ></Entry>
 
                 </Grid>
+
+                <ActivityIndicator 
+                    VerticalOptions="CenterAndExpand" 
+                    IsRunning="{Binding IsRunning,Mode=TwoWay }">
+
+                </ActivityIndicator>
+
+
                 <StackLayout 
                     Orientation="Horizontal" >
                     <Label
@@ -85,12 +93,14 @@
 
 
                 </StackLayout>
-                <ActivityIndicator 
-                    VerticalOptions="CenterAndExpand" 
-                    IsRunning="{Binding IsRunning,Mode=TwoWay }">
-
-                </ActivityIndicator>
-
+                    <Label
+                        
+                        HorizontalOptions="Center"
+                        TextColor="Blue"
+                        Text=" Forgot your password">
+                       
+                    </Label>
+                
 
 
                 <StackLayout 

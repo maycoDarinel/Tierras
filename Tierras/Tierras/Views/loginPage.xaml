@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Tierras.Views.loginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}" 
+             Title=" Login">
+    <ContentPage.Content>
+        <ScrollView 
+            BindingContext="{Binding Login}">
+            <StackLayout>
+
+                <Label 
+                
+                Text="Tierras"
+                Padding=" 10,20,10,5"
+                FontAttributes="Bold" 
+                FontSize="Large" 
+                HorizontalOptions="Center">
+
+                </Label>
+                <Image Source="onu.png">
+
+                </Image>
+                <Grid
+                    Margin=" 0,20">
+
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width=" *"/>
+                        <ColumnDefinition Width=" 2*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row=" 0"
+                        Grid.Column=" 0"
+                        Text="E-mail"
+                        VerticalOptions="Center" >
+
+
+                    </Label>
+
+                    <Entry 
+                        Grid.Row=" 0"
+                        Grid.Column=" 1"   
+                        Keyboard="Email" 
+                        Text="{Binding Email, Mode=TwoWay}"    
+                        Placeholder="Ingrese su email..."
+                
+                    ></Entry>
+
+                    <Label
+                        Grid.Row=" 1"
+                        Grid.Column=" 0"
+                        Text="Contraseña"  
+                        VerticalOptions="Center" 
+                
+                    ></Label>
+                    <Entry 
+                        Grid.Row=" 1"
+                        Grid.Column=" 1"
+                        IsPassword="True" 
+                        Text="{Binding password,Mode=TwoWay }"
+                        Placeholder="Ingrese su contraseña..."
+                
+                    ></Entry>
+
+                </Grid>
+                <StackLayout 
+                    Orientation="Horizontal" >
+                    <Label
+                        Text=" Remember me in this divice"
+                        VerticalOptions="Center"   
+                        HorizontalOptions="StartAndExpand" >
+
+                    </Label>
+                    <Switch 
+                        HorizontalOptions="End" 
+                        IsToggled="{Binding IsRemembered,Mode=TwoWay }">
+                        
+
+                    </Switch>
+
+
+                </StackLayout>
+                <ActivityIndicator 
+                    VerticalOptions="CenterAndExpand" 
+                    IsRunning="{Binding IsRunning,Mode=TwoWay }">
+
+                </ActivityIndicator>
+
+
+
+                <StackLayout 
+                    Margin=" 40,0">
+                    <Button 
+                        BackgroundColor="Navy"
+                        Command="{Binding LoginCommand}"
+                        HeightRequest=" 46"
+                        TextColor="White" 
+                        Text=" LOGIN"
+                        CornerRadius=" 23"
+                    ></Button>
+
+                    <Button 
+                        BackgroundColor="Purple" 
+                        HeightRequest=" 46"
+                        TextColor="White" 
+                        Text="Registrar"
+                        CornerRadius="23"
+                    ></Button>
+                </StackLayout>
+                <StackLayout 
+                    HorizontalOptions="Center" 
+                    Orientation="Horizontal" >
+                    <Image Source="facebook_logo.png"
+                       WidthRequest=" 80">
+
+                    </Image>
+                    <Image Source="twitter_logo.png"
+                       WidthRequest=" 80">
+
+                    </Image>
+                    <Image Source="instagram_logo.png"
+                       WidthRequest=" 80">
+
+                    </Image>
+
+                </StackLayout>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -62,7 +62,7 @@
                         Grid.Row=" 1"
                         Grid.Column=" 1"
                         IsPassword="True" 
-                        Text="{Binding password,Mode=TwoWay }"
+                        Text="{Binding Password,Mode=TwoWay }"
                         Placeholder="Ingrese su contraseña..."
                 
                     ></Entry>
@@ -109,6 +109,7 @@
                         BackgroundColor="Navy"
                         Command="{Binding LoginCommand}"
                         HeightRequest=" 46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         TextColor="White" 
                         Text=" LOGIN"
                         CornerRadius=" 23"
@@ -117,6 +118,7 @@
                     <Button 
                         BackgroundColor="Purple" 
                         HeightRequest=" 46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         TextColor="White" 
                         Text="Registrar"
                         CornerRadius="23"

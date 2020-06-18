@@ -1,12 +1,9 @@
 ﻿
-
-using Newtonsoft.Json;
-using System.Collections.Generic;
-
 namespace Tierras.Models
 {
 
     using Newtonsoft.Json;
+    using System;
     using System.Collections.Generic;
     public class Tierra
     {
@@ -50,7 +47,7 @@ namespace Tierras.Models
 
 
         [JsonProperty(PropertyName = "latlng")]
-        public IList<int> Latlng { get; set; }
+        public IList<double> Latlng { get; set; }
 
 
         [JsonProperty(PropertyName = "demonym")]
@@ -58,11 +55,11 @@ namespace Tierras.Models
 
 
         [JsonProperty(PropertyName = "area")]
-        public int Area { get; set; }
+        public double? Area { get; set; }
 
 
         [JsonProperty(PropertyName = "gini")]
-        public double Gini { get; set; }
+        public double? Gini { get; set; }
 
 
         [JsonProperty(PropertyName = "timezones")]

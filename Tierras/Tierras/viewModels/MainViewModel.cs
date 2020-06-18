@@ -1,6 +1,7 @@
 ﻿ //video 7
 namespace Tierras.viewModels
 {
+
     public class MainViewModel
     {
         #region ViewModels

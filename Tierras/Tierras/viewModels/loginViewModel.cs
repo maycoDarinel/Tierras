@@ -83,6 +83,7 @@ namespace Tierras.viewModels
 
             this.Email = "maycodarinel@gmail.com";
             this.Password = "1234";
+            
         }
 
         #endregion
